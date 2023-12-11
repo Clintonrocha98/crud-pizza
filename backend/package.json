@@ -1,8 +1,13 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.ts",
   "license": "MIT",
+  "scripts": {
+    "dev": "tsx watch ./src/server.ts",
+    "build": "tsc src",
+    "start": "node dist/server.js"
+  },
   "dependencies": {
     "@prisma/client": "^5.7.0",
     "cors": "^2.8.5",
