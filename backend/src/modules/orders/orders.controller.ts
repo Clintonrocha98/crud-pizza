@@ -5,9 +5,9 @@ class OrdersController {
   constructor(private orders: OrdersService) {}
 
   async createOrder(req: Request, res: Response) {
-    const { pizzaId } = req.body;
+    const { name, price, quantity } = req.body;
 
-    const order = await this.orders.createOrder(pizzaId);
+    const order = await this.orders.createOrder({ name, price, quantity });
 
     return res.status(201).json(order);
   }

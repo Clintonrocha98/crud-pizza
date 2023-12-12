@@ -1,35 +1,83 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { ChangeEvent, useEffect, useState } from "react";
+import "./App.css";
+
+type pizzaType = {
+  id: string;
+  name: string;
+  price: number;
+  ingredients: Array<string>;
+};
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [pizzas, setPizzas] = useState<pizzaType[] | null>();
+  const [orders, setOrders] = useState<string>();
+
+  useEffect(() => {
+    const fetchApi = async () => {
+      try {
+        const response = await fetch("http://localhost:3333/api/pizzas");
+        const data = await response.json();
+        setPizzas(data);
+      } catch (error) {
+        console.error("Error:", error);
+      }
+    };
+    fetchApi();
+  }, []);
+
+  const handleRadioChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setOrders(event.target.value);
+  };
+  const handleOrder = async () => {
+    await fetch("http://localhost:3333/api/newOrder", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(orders),
+    });
+  };
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="container">
+        <div className="pizzas">
+          <h1>Pizzas</h1>
+          {pizzas?.map((pizza) => (
+            <div
+              key={pizza.id}
+              className={`card ${orders === pizza.id ? "checked" : ""}`}
+            >
+              <input
+                type="radio"
+                id={pizza.name}
+                value={pizza.id}
+                checked={orders === pizza.id}
+                onChange={handleRadioChange}
+              />
+              <label htmlFor={pizza.name}>
+                <div className="card-header">{pizza.name}</div>
+                <div className="card-body">
+                  <h3>R${pizza.price}</h3>
+                  <div className="ingredientes">
+                    {pizza?.ingredients?.map((ing) => (
+                      <p key={ing}>{ing}</p>
+                    ))}
+                  </div>
+                </div>
+              </label>
+            </div>
+          ))}
+          <button onClick={handleOrder}>Confirme</button>
+        </div>
+        {orders && (
+          <div className="orders">
+            <h1>Orders</h1>
+          </div>
+        )}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

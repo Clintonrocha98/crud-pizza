@@ -1,9 +1,9 @@
-import { Order } from "@prisma/client";
+import { OrdersDTO } from "../orders.dto";
 
 interface IOrdersRepository {
-  createOrder(pizzaId: string): Promise<Order>;
-  getOrderById(id: string): Promise<Order>;
-  getAllOrders(): Promise<Order[]>;
+  createOrder(order: OrdersDTO): Promise<OrdersDTO>;
+  getOrderById(id: string): Promise<OrdersDTO>;
+  getAllOrders(): Promise<OrdersDTO[]>;
 }
 
 export { IOrdersRepository };

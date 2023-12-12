@@ -8,6 +8,9 @@ datasource db {
 }
 
 model Order {
-  id      String @id @default(uuid())
-  pizzaId String
+  id String @id @default(uuid())
+
+  name     String
+  price    Float
+  quantity Int
 }
