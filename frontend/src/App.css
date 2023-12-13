@@ -13,11 +13,13 @@
   align-items: center;
   flex-direction: column;
   gap: 10px;
+  height: 100%;
+  justify-content: space-around;
 }
 .pizzas h1 {
   font-size: 2rem;
 }
-.pizzas button {
+.pizzas .confirme {
   background-color: #3498db;
   border: none;
   border-radius: 10px;
@@ -28,18 +30,16 @@
   cursor: pointer;
 }
 .card {
+  display: flex;
   width: 200px;
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.card label {
-  cursor: pointer;
-}
-.card:hover {
-  transform: translate(5px, -5px);
-}
+
 .card input[type="radio"] {
   display: none;
 }
@@ -57,6 +57,7 @@
 
 .card-body {
   padding: 10px;
+  height: 100%;
 }
 
 .ingredientes {
@@ -81,4 +82,36 @@
 }
 .orders h1 {
   font-size: 2rem;
+}
+.card-bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px 10px;
+}
+.quantity {
+  width: 30px;
+}
+.add {
+  background-color: #3498db;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+.buy {
+  font-size: 1.5rem;
+  padding: 0 10px;
+}
+.add:hover {
+  transform: scale(1.1);
+}
+.container-pizzas {
+  display: flex;
+  flex-wrap: wrap;
+  width: 500px;
+  gap: 10px;
+  justify-content: center;
+}
+.select {
+  outline: 2px solid green;
 }
