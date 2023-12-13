@@ -11,7 +11,7 @@ type order = Pick<pizzaType, "name" | "price"> & { quantity: number };
 
 function App() {
   const [pizzas, setPizzas] = useState<pizzaType[] | null>();
-  const [ordersApi, setOrdersApi] = useState([]);
+  const [ordersApi, setOrdersApi] = useState<order[] | null>(null);
   const [orders, setOrders] = useState<order>({
     name: "",
     price: 0,
@@ -114,12 +114,12 @@ function App() {
             Confirm
           </button>
         </div>
-        {!!ordersApi[0] && (
+        {ordersApi && (
           <div className="orders">
             <h1>Orders</h1>
             <div className="container-pizzas">
               {ordersApi?.map((pizza) => (
-                <div key={pizza.id} className="card">
+                <div key={pizza.name} className="card">
                   <div className="card-header">{pizza.name}</div>
                   <div className="card-body">
                     <h3>R${pizza.price}</h3>
