@@ -1,4 +1,4 @@
-# Documentação do Desafio - Pizzaria Backend
+# Desafio - Pizzaria Backend
 
 ## Descrição do Projeto
 
@@ -84,7 +84,7 @@ npm run dev # Iniciar o servidor
 Certifique-se de ter as configurações do banco de dados corretamente definidas antes de iniciar o servidor.
 
 
-# Documentação do Frontend - Pedido de Pizza com React e CSS
+# Desafio - Pizzaria Front
 
 ## Descrição do Projeto
 
