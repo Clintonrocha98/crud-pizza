@@ -77,8 +77,11 @@ Retorna os detalhes de um pedido específico com base no ID fornecido.
 Para iniciar o servidor, execute o seguinte comando no terminal:
 
 ``` bash
-npm install # Instalar as dependências
-npm run dev # Iniciar o servidor
+npm install
+
+npx prisma migrate dev
+
+npm run dev
 ```
 
 Certifique-se de ter as configurações do banco de dados corretamente definidas antes de iniciar o servidor.
