@@ -26,6 +26,8 @@ O backend do projeto foi desenvolvido utilizando as seguintes tecnologias:
 
 ### Estrutura do Projeto
 
+[![](https://mermaid.ink/img/pako:eNpVkd1uwjAMhV8l8hVI8AKdtIvRjZ8JwQq7WcOFabxRrU26OJmGgHdf0hax5co--XTkY5-gMIoggQ-LzUFs0zupBft910p4wOKTtJIQ5PCecgmPP40lZjHIjHfEQwk7MR7fn2fb7Vpk9OWJHZ_FNF9ZRZYnRjtrqorsrvOYtvQEqypQs57akP0uC-qRWYu8MgVi3hMZNYZLZ-yxh-Z_oEW-tiXXKFbZsv2OM-tY_MuiCyMUiRSV4WukRWvz4smW0ek5H6TocI9Mw6sTjKAmW2OpwqJOUZTgDlSThCSUkY1ul8Chd2Zz1AUkznoagW8UOkpLDEPUkLxjxUFtUL8Zc-tJxWDL7hLtQS6_mwuIKQ?type=png)](https://mermaid.live/edit#pako:eNpVkd1uwjAMhV8l8hVI8AKdtIvRjZ8JwQq7WcOFabxRrU26OJmGgHdf0hax5co--XTkY5-gMIoggQ-LzUFs0zupBft910p4wOKTtJIQ5PCecgmPP40lZjHIjHfEQwk7MR7fn2fb7Vpk9OWJHZ_FNF9ZRZYnRjtrqorsrvOYtvQEqypQs57akP0uC-qRWYu8MgVi3hMZNYZLZ-yxh-Z_oEW-tiXXKFbZsv2OM-tY_MuiCyMUiRSV4WukRWvz4smW0ek5H6TocI9Mw6sTjKAmW2OpwqJOUZTgDlSThCSUkY1ul8Chd2Zz1AUkznoagW8UOkpLDEPUkLxjxUFtUL8Zc-tJxWDL7hLtQS6_mwuIKQ)
+
 O projeto está estruturado em três partes principais: rotas (routes), serviços (services), e repositório (repository).
 
 - **Rotas (`routes.ts`)**: Define as rotas da aplicação utilizando o Express.
@@ -72,6 +74,8 @@ Retorna os detalhes de um pedido específico com base no ID fornecido.
 
 - `id`: Identificador único do pedido.
 
+
+
 ## Como Iniciar o Servidor
 
 Para iniciar o servidor, execute o seguinte comando no terminal:
@@ -98,6 +102,8 @@ O frontend deste projeto foi desenvolvido utilizando React e CSS para criar uma 
 A estrutura do projeto é baseada em componentes React, que são gerenciados pelo arquivo `App.tsx`. Além disso, foi utilizado o arquivo de estilo `App.css` para estilizar a aplicação.
 
 ## Componentes e Funcionalidades
+
+[![](https://mermaid.ink/img/pako:eNqNkc1KAzEQx19lmHPL3iMI2lW8iKXuyaaHaTPagW4S84HYj-fxCXyCvpjZdhfxIPQ28-f_S8gvO1w5w6jwLZBfQ1NfaQsQ8_K8a7wPzia2BiYb4TJp7AoAN_M-gKGxgPH4ej_j9yxRjl_Hb47w0DTTPdzONVbkpfKy3VLUuOjP-JeYDITlj6dgOFzA1APjOuCSW-7-EJUS00PlNTjClkNLYoqcXRdqTGtuiwBVxiXFk4pD6VFO7vnTrlClkHmE2RtKXAsVhy2qV9rEknqyL8797mwkufB4tn_6hMMP1XuI9A?type=png)](https://mermaid.live/edit#pako:eNqNkc1KAzEQx19lmHPL3iMI2lW8iKXuyaaHaTPagW4S84HYj-fxCXyCvpjZdhfxIPQ28-f_S8gvO1w5w6jwLZBfQ1NfaQsQ8_K8a7wPzia2BiYb4TJp7AoAN_M-gKGxgPH4ej_j9yxRjl_Hb47w0DTTPdzONVbkpfKy3VLUuOjP-JeYDITlj6dgOFzA1APjOuCSW-7-EJUS00PlNTjClkNLYoqcXRdqTGtuiwBVxiXFk4pD6VFO7vnTrlClkHmE2RtKXAsVhy2qV9rEknqyL8797mwkufB4tn_6hMMP1XuI9A)
 
 ### 1. **`App.tsx`**
 
